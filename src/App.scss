@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.social-icon-container {
+    a {
+        img {
+            &:hover {
+                filter: sepia(100%) saturate(6585%) hue-rotate(125deg);
+                cursor: pointer;
+            }
+        }
+    }
+}
