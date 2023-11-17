@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.site-wrapper {
-    background-color: #F7E1D7;
-}
-
 /*
 =====================
 Header
@@ -17,20 +12,42 @@ Header
     a {
         img {
             &:hover {
-                filter: sepia(100%) saturate(6585%) hue-rotate(125deg);
+                opacity: 0.5;
                 cursor: pointer;
             }
         }
     }
 }
-
 /*
-===================
+====================
+service-menu
+====================
+*/ 
+.service-price-container{
+    width: 70vw;
+}
+.service-price-container h2{
+    color: #9caba1;
+}
+.price-detail-container{
+    background-color: #fafafa;
+}
+/*
+=================
+Gallery
+=================
+*/ 
+.collection-container{
+    width: 37vw;
+}
+.gallery-container{
+    background-color: #fafafa;
+}
+/*===================
 Footer
 ===================
 */
 .footer-wrapper {
-    background-color: #F8AD9D;
     height: 10vh;
 }
 

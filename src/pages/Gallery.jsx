@@ -1,22 +1,18 @@
 import React from "react";
+import { Button } from "flowbite-react";
 
 export default function Gallery() {
   const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] =
     React.useState(initialVisibleImages);
   const [isSpinning, setIsSpinning] = React.useState(false);
+
   const loadMoreImages = () => {
-    // Start spinning animation
     setIsSpinning(true);
-
-    // Simulate loading delay (you can replace this with actual loading logic)
     setTimeout(() => {
-      // Increment the number of visible images by 9 after the loading delay
       setVisibleImages((prevVisibleImages) => prevVisibleImages + 9);
-
-      // Stop spinning animation
       setIsSpinning(false);
-    }, 1000); // 1000 milliseconds (1 second) is an example loading delay
+    }, 1000);
   };
 
   const images = [
@@ -51,29 +47,29 @@ export default function Gallery() {
   return (
     <div className="gallery-container">
       <div className="gallery-header-container text-center">
-        <h1 className="pb-4 text-2xl font-semibold">Gallery</h1>
+        <h1 className="pb-10 font-semibold text-4xl">Gallery</h1>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="collection-container mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.slice(0, visibleImages).map((image, index) => (
           <div key={index}>
             <img
               className="gallery-image h-auto max-w-full rounded-lg"
               src={image}
-              alt=""
+              alt="gallery-image"
             />
           </div>
         ))}
         {visibleImages < images.length && (
           <div className="load-more-container">
-            <button
-              className={`load-more bg-red-400 text-white px-4 py-2 rounded-full ${
-                isSpinning ? "animate-spin" : ""
-              }`}
+            <Button
+              color="dark"
+              className={` text-sm ${isSpinning ? "animate-spin" : ""}`}
               onClick={loadMoreImages}
             >
-              {isSpinning ? "+" : "Load more"}
-            </button>
+              {" "}
+              {isSpinning ? "+" : "Load more..."}
+            </Button>
           </div>
         )}
       </div>
