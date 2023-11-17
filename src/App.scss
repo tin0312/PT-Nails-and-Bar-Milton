@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+.site-wrapper {
+    background-color: #F7E1D7;
+}
+
+/*
+=====================
+Header
+=====================
+
+*/
 .social-icon-container {
     a {
         img {
@@ -12,4 +22,24 @@
             }
         }
     }
+}
+
+/*
+===================
+Footer
+===================
+*/
+.footer-wrapper {
+    background-color: #F8AD9D;
+    height: 10vh;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
 }
