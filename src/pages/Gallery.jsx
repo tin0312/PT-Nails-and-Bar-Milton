@@ -45,7 +45,7 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container mx-auto">
       <div className="gallery-header-container text-center">
         <h1 className="pb-10 font-semibold text-4xl">Gallery</h1>
       </div>
@@ -61,7 +61,7 @@ export default function Gallery() {
           </div>
         ))}
         {visibleImages < images.length && (
-          <div className="load-more-container">
+          <div className="load-more-container pb-5">
             <Button
               color="dark"
               className={` text-sm ${isSpinning ? "animate-spin" : ""}`}

@@ -19,6 +19,28 @@ Header
     }
 }
 /*
+=============
+Home Page
+=============
+*/ 
+.cta-image-container{
+    width: 100vw !important;
+
+    img{
+        width: 100% !important;
+    }
+}
+.overlay-container{
+    width: 30%;
+    top: 35%;
+    left: 12%;
+    background-color: rgb(255,255,255,0.5);
+    height: 45%;
+}
+.cta-header-container{
+    border-bottom: 2.5px solid #54595F;
+}
+/*
 ====================
 service-menu
 ====================
@@ -38,10 +60,11 @@ Gallery
 =================
 */ 
 .collection-container{
-    width: 37vw;
+    width: 40vw;
 }
 .gallery-container{
     background-color: #fafafa;
+    width: 60vw;
 }
 /*===================
 Footer

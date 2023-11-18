@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <header className="header-wrapper pt-4 pb-20 w-screen">
+    <header className="header-wrapper pt-4 pb-3 w-screen">
       <div className="header-container w-3/4 mx-auto flex items-center justify-between">
         <div className="header-logo-container">
           <Link className="site-logo" to="/">
