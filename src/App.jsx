@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Promotion from "./pages/Promotion";
+import Booking from "./pages/Booking";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="promotion" element={<Promotion />} />
+            <Route path="booking" element={<Booking />} />
             <Route path="services" element={<Services />}>
               <Route path=":serviceName" element={<ServiceDetail />} />
             </Route>

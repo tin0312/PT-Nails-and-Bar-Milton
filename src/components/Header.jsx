@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import darkBgLogo from "../assets/images/darkBgLogo.jpg";
+import storeLogo from "../assets/images/store-logo.jpg";
 import instagramIcon from "../assets/images/instagram-icon.svg"
 import facebookIcon from "../assets/images/facebook-icon.svg"
 
@@ -12,13 +12,13 @@ export default function Header() {
   };
 
   return (
-    <header className="header-wrapper pt-4 pb-3 w-screen">
+    <header className="header-wrapper pb-10 pt-5 w-screen">
       <div className="header-container w-3/4 mx-auto flex items-center justify-between">
         <div className="header-logo-container">
           <Link className="site-logo" to="/">
             <img
               className="w-2/12 rounded-full"
-              src={darkBgLogo}
+              src={storeLogo}
               alt="dark-logo"
             />
           </Link>
@@ -30,12 +30,12 @@ export default function Header() {
           >
             HOME
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/promotion"
             style={({ isActive }) => (isActive ? activeStyles : null)}
           >
             PROMOTION
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/services/manicure"
             style={({ isActive }) => (isActive ? activeStyles : null)}

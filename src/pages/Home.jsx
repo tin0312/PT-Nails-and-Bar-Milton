@@ -1,12 +1,19 @@
 import React from "react";
-import nailCta from "../assets/images/nail-cta-bg.jpg";
+import { NavLink, Link } from "react-router-dom";
+import nailCta from "../assets/images/nail-cta-bg.avif";
 import quotationIcon from "../assets/images/quotation-icon.png";
+import storyImage from "../assets/images/story-image.webp";
+import { Carousel } from "flowbite-react";
 import { Button } from "flowbite-react";
+import productOne from "../assets/images/product-1.webp";
+import productTwo from "../assets/images/product-2.webp";
+import productThree from "../assets/images/product-3.webp";
 
+const productImages = [productOne, productTwo, productThree];
 export default function Home() {
   return (
     <>
-      <div className="home-container h-screen">
+      <div className="home-container">
         <div className="cta-image-container relative items-around">
           <img src={nailCta} alt="nail-cta-image" />
         </div>
@@ -14,16 +21,82 @@ export default function Home() {
           <div className="w-full cta-header-container pb-24 flex justify-start pl-0 text-3xl">
             <h2>Let's get glam!</h2>
           </div>
-          <div className="message-container flex flex-col gap-8 items-start">
+          <div className="message-container flex flex-col gap-5 items-start">
             <div className="flex gap-3">
-              <img className="w-8 h-8" src={quotationIcon} alt="quoation-icon" />
-              <p className="w-3/5 tracking-wider text-lg">
-                Great nail's don't happen by chance, they shappen by appoitment.
+              <img
+                className="w-8 h-8"
+                src={quotationIcon}
+                alt="quoation-icon"
+              />
+              <p className="w-4/5 tracking-wider text-lg">
+                Great nails don't happen by chance, they are sharpened by
+                appointments.
               </p>
             </div>
-            <Button color="dark" className="uppercase">
-              Book appoitment
+            <Button as={Link} to="/booking" color="dark" className="uppercase">
+              Book appointment
             </Button>
+          </div>
+        </div>
+        <div className="story-container w-3/4 mx-auto py-20 flex">
+          <div className="story-message-container w-3/5 flex flex-col gap-10">
+            <p className="number-mark w-12 font-bold pb-10">/01</p>
+            <div className="story-title-container pt-4">
+              <h3 className="section-title text-4xl">We love doing nails</h3>
+              <h4 className="text-5xl">Our story</h4>
+            </div>
+            <p className="w-2/3">
+              PT Nails and Bar aims to provide a satisfying experience for
+              everyone customer that comes to our shop. Our inviting, cozy salon
+              allows a comforting and relaxing environment. With our skilled
+              nail technicians, we are your number one destination for your nail
+              care!
+            </p>
+          </div>
+          <div className="story-image-container w-2/5">
+            <img className="w-full h-full" src={storyImage} alt="story-image" />
+          </div>
+        </div>
+        <div className="service-introduction-container flex w-3/4 mx-auto py-20">
+          <div className="service-header-container w-3/5 flex flex-col gap-10">
+            <p className="number-mark w-12 font-bold pb-10">/02</p>
+            <div className="story-title-container pt-4">
+              <h3 className="section-title text-4xl pb-3">We are pround of</h3>
+              <h4 className="text-5xl">Quality Equipment</h4>
+            </div>
+          </div>
+          <div className="service-message-container w-2/5 flex flex-col justify-around">
+            <p className="w-full p-0 tracking-wider">
+              We pride ourselves on providing our customers with fabulous nail
+              care while maintaining the highest level of cleanliness and
+              sterilization. All of our equipment and tools are UV sterilized.
+              We also use disposable spa liners, files and buffers.{" "}
+            </p>
+            <div className="flex w-3/4">
+              <NavLink to="/services/manicure">
+                <Button className="service-btn uppercase" color="white">
+                  View our services
+                </Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
+        <div className="product-container flex w-3/4 mx-auto py-20">
+          <div className="product-header-container w-3/5 flex flex-col gap-10">
+            <p className="number-mark w-12 font-bold pb-10">/03</p>
+            <div className="product-title-container pt-4">
+              <h3 className="section-title text-4xl pb-3">We use</h3>
+              <h4 className="text-5xl">Quality Products</h4>
+            </div>
+          </div>
+          <div className="product-slide-container w-2/5">
+            <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 w-full">
+              <Carousel slideInterval={3000}>
+                {productImages.map((image, index) => (
+                  <img key={index} src={image} alt={`product-slide-${index}`} />
+                ))}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>

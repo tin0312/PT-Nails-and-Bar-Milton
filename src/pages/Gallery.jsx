@@ -47,7 +47,7 @@ export default function Gallery() {
   return (
     <div className="gallery-container mx-auto">
       <div className="gallery-header-container text-center">
-        <h1 className="pb-10 font-semibold text-4xl">Gallery</h1>
+        <h1 className="pb-10 pt-4 font-semibold text-4xl">Gallery</h1>
       </div>
 
       <div className="collection-container mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
