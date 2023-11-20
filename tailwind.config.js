@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    screens: {
+			mobile: { max: "980px" },
+			desktop: { min: "980px" },
+		},
   },
   plugins: [
     require("flowbite/plugin")

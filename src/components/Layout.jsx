@@ -23,7 +23,7 @@ export default function Layout() {
 
   return (
     <div className="site-wrapper">
-      <div style={{ height: "1.5em" }} className="sticky top-0">
+      <div style={{ height: "1.5em" }} className="fix top-0">
         <Marquee velocity={100} minScale={0.7} scatterRandomly={false}>
           {times(5, Number).map((id) => (
             <Motion
@@ -40,7 +40,7 @@ export default function Layout() {
                   textAlign: "center",
                 }}
               >
-                <p style={{ margin: 0, color: "#333" }}>
+                <p style={{ margin: 0, color: "#333", width: "100%" }}>
                   {messages[currentMessageIndex]}
                 </p>
               </div>
@@ -49,7 +49,7 @@ export default function Layout() {
         </Marquee>
       </div>
       <Header />
-      <main className="mx-auto pb-20">
+      <main className="mx-auto w-screen">
         <Outlet />
       </main>
       <Footer />

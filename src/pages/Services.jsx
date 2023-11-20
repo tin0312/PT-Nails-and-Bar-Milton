@@ -9,10 +9,10 @@ export default function Services() {
   };
 
   return (
-    <div className="service-wrapper h-screen flex flex-col items-center">
+    <div className="service-wrapper flex flex-col items-center mobile:pt-20 h-auto">
       <h1 className="text-center font-semibold text-5xl">Our Services</h1>
       <div className="service-link-container">
-        <nav className="service-link-container flex gap-4 pt-10 uppercase">
+        <nav className="flex mobile:flex-wrap mobile:justify-center desktop:gap-6 mobile:gap-8 pt-10 mobile:pb-4 uppercase">
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
             to="/services/manicure"

@@ -93,7 +93,7 @@ export default function ServiceDetail() {
     <div className="service-price-container">
       <h2 className="text-center py-6 text-4xl">{formattedServiceName}</h2>
       <h3 className="text-center text-2xl pb-4">Services and Price</h3>
-      <div className="price-detail-container flex flex-col gap-8 p-12">
+      <div className="price-detail-container flex flex-col gap-8 py-12">
         {selectedService.map((service, index) => (
             <div className = "flex w-3/4 justify-between mx-auto"key={index}>
               <h4 className="uppercase font-bold">{service.name}</h4>

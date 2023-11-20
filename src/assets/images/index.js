@@ -1,0 +1,28 @@
+export { default as pic1 } from "./pic-1.jpg";
+export { default as pic2 } from "./pic-2.jpg";
+export { default as pic3 } from "./pic-3.jpg";
+export { default as pic4 } from "./pic-4.jpg";
+export { default as pic5 } from "./pic-5.jpg";
+export { default as pic6 } from "./pic-6.jpg";
+export { default as pic7 } from "./pic-7.jpg";
+export { default as pic8 } from "./pic-8.jpg";
+export { default as pic9 } from "./pic-9.jpg";
+export { default as pic10 } from "./pic-10.jpg";
+export { default as pic11 } from "./pic-11.jpg";
+export { default as pic12 } from "./pic-12.jpg";
+export { default as pic13 } from "./pic-13.jpg";
+export { default as pic14 } from "./pic-14.jpg";
+export { default as pic15 } from "./pic-15.jpg";
+export { default as pic16 } from "./pic-16.jpg";
+export { default as pic17 } from "./pic-17.jpg";
+export { default as pic18 } from "./pic-18.jpg";
+export { default as pic19 } from "./pic-19.jpg";
+export { default as pic20 } from "./pic-20.jpg";
+export { default as pic21 } from "./pic-21.jpg";
+export { default as pic22 } from "./pic-22.jpg";
+export { default as pic23 } from "./pic-23.jpg";
+export { default as pic24 } from "./pic-24.jpg";
+export { default as pic25 } from "./pic-25.jpg";
+export { default as pic26} from "./pic-26.jpg";
+export { default as pic27} from "./pic-27.jpg";
+

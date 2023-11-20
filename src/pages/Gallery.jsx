@@ -1,56 +1,58 @@
 import React from "react";
-import { Button } from "flowbite-react";
+import { Button } from "flowbite-react"
+import * as Images from "../assets/images/index"
 
 export default function Gallery() {
-  const initialVisibleImages = 9;
+  const initialVisibleImages = 9
   const [visibleImages, setVisibleImages] =
-    React.useState(initialVisibleImages);
-  const [isSpinning, setIsSpinning] = React.useState(false);
+    React.useState(initialVisibleImages)
+  const [isSpinning, setIsSpinning] = React.useState(false)
 
   const loadMoreImages = () => {
-    setIsSpinning(true);
+    setIsSpinning(true)
     setTimeout(() => {
-      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9);
-      setIsSpinning(false);
-    }, 1000);
+      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9)
+      setIsSpinning(false)
+    }, 1000)
   };
 
   const images = [
-    "./src/assets/images/pic-1.jpg",
-    "./src/assets/images/pic-2.jpg",
-    "./src/assets/images/pic-3.jpg",
-    "./src/assets/images/pic-4.jpg",
-    "./src/assets/images/pic-5.jpg",
-    "./src/assets/images/pic-13.jpg",
-    "./src/assets/images/pic-7.jpg",
-    "./src/assets/images/pic-8.jpg",
-    "./src/assets/images/pic-9.jpg",
-    "./src/assets/images/pic-10.jpg",
-    "./src/assets/images/pic-11.jpg",
-    "./src/assets/images/pic-12.jpg",
-    "./src/assets/images/pic-14.jpg",
-    "./src/assets/images/pic-15.jpg",
-    "./src/assets/images/pic-16.jpg",
-    "./src/assets/images/pic-17.jpg",
-    "./src/assets/images/pic-18.jpg",
-    "./src/assets/images/pic-19.jpg",
-    "./src/assets/images/pic-20.jpg",
-    "./src/assets/images/pic-21.jpg",
-    "./src/assets/images/pic-22.jpg",
-    "./src/assets/images/pic-23.jpg",
-    "./src/assets/images/pic-24.jpg",
-    "./src/assets/images/pic-25.jpg",
-    "./src/assets/images/pic-26.jpg",
-    "./src/assets/images/pic-27.jpg",
-  ];
+    Images.pic1,
+    Images.pic2,
+    Images.pic3,
+    Images.pic4,
+    Images.pic5,
+    Images.pic6,
+    Images.pic7,
+    Images.pic8,
+    Images.pic9,
+    Images.pic10,
+    Images.pic11,
+    Images.pic12,
+    Images.pic13,
+    Images.pic14,
+    Images.pic15,
+    Images.pic16,
+    Images.pic17,
+    Images.pic18,
+    Images.pic19,
+    Images.pic20,
+    Images.pic21,
+    Images.pic22,
+    Images.pic23,
+    Images.pic24,
+    Images.pic25,
+    Images.pic26,
+    Images.pic27
+  ]
 
   return (
-    <div className="gallery-container mx-auto">
+    <div className="gallery-container mx-auto mb-20 pb-12 mobile:w-screen">
       <div className="gallery-header-container text-center">
         <h1 className="pb-10 pt-4 font-semibold text-4xl">Gallery</h1>
       </div>
 
-      <div className="collection-container mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="collection-container mx-auto grid desktop:grid-cols-2 mobile:grid-cols-1 gap-4">
         {images.slice(0, visibleImages).map((image, index) => (
           <div key={index}>
             <img
