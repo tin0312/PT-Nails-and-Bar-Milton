@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper flex-col w-screen pt-10 px-10 items-center mobile:h-auto">
+    <footer
+      id="booking"
+      className="footer-wrapper flex-col w-screen pt-10 px-10 items-center mobile:h-auto"
+    >
       <div className="footer-container h-full w-full desktop:flex mobile:flex-col desktop:justify-between">
         <div className="map-container desktop:w-1/3 desktop:h-3/4 mobile:h-2/4 mobile:pb-10">
           <iframe
@@ -55,7 +58,9 @@ export default function Footer() {
       </div>
       <div className="text-center pt-20 opacity-40 text-sm">
         {" "}
-        <p>&copy; 2023 PT Nails Bar Milton. All rights reserved. | Made with ❤️{" "}</p>
+        <p>
+          &copy; 2023 PT Nails Bar Milton. All rights reserved. | Made with ❤️{" "}
+        </p>
       </div>
     </footer>
   );

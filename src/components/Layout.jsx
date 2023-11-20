@@ -6,20 +6,19 @@ import Marquee, { Motion } from "react-marquee-slider";
 import times from "lodash.times";
 
 export default function Layout() {
+  const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
   const messages = [
     "20% off of all services from Nov 22 to Dec 22, 2023",
     "Free one drink with service!",
     "10% off of all services with a Google review :)",
-  ]
-
-  const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
+  ];
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
-    },10000); 
+    }, 10000);
     return () => clearInterval(interval);
-  }, [])
+  }, []);
 
   return (
     <div className="site-wrapper">
@@ -54,5 +53,5 @@ export default function Layout() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }

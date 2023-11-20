@@ -5,15 +5,22 @@ import quotationIcon from "../assets/images/quotation-icon.png";
 import storyImage from "../assets/images/story-image.webp";
 import { Carousel } from "flowbite-react";
 import { Button } from "flowbite-react";
-import productOne from "../assets/images/product-1.webp";
-import productTwo from "../assets/images/product-2.webp";
-import productThree from "../assets/images/product-3.webp";
+import * as Images from "../assets/images/index"
 
-const productImages = [productOne, productTwo, productThree];
+const productImages = [Images.productOne, Images.productTwo, Images.productThree, Images.productFour, Images.productFive];
 export default function Home() {
+
+  const scrollToBooking = () => {
+    scroller.scrollTo('booking', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    });
+  };
+
   return (
     <>
-      <div className="home-container w-screen">
+      <div className="home-container w-screen mb-20">
         <div className="cta-image-container relative">
           <img src={nailCta} alt="nail-cta-image" />
         </div>
@@ -26,7 +33,7 @@ export default function Home() {
             <div className="desktop:flex mobile:flex-col icon-container">
               <div className="mobile:w-full flex justify-center pb-10">
                 <img
-                  className="h-8 w-8"
+                  className="h-8 w-8 desktop:pr-2"
                   src={quotationIcon}
                   alt="quoation-icon"
                 />
@@ -40,9 +47,10 @@ export default function Home() {
             <div className="w-full flex justify-start desktop:pt-12 mobile:pt-4 ">
               <Button
                 as={Link}
-                to="/booking"
+                to="/#booking"
                 color="dark"
                 className="uppercase"
+                onClick={scrollToBooking}
               >
                 Book appointment
               </Button>

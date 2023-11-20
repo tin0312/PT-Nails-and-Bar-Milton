@@ -50,6 +50,14 @@ Home Page
     background-color: rgb(255,255,255,0.6);
     height: 45%;
 }
+@media only screen and (min-width: 390px) and (max-width: 980px){
+    .overlay-container{
+        transform: translate(-50%, -50%);
+        top: 60%;
+        left: 50%;
+    }
+}
+
 .cta-header-container{
     border-bottom: 2.5px solid #54595F;
 }

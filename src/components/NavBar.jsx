@@ -8,8 +8,9 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+    console.log(isMenuOpen)
+  }
 
   const activeStyles = {
     fontWeight: "bold",
@@ -19,15 +20,17 @@ export default function NavBar() {
 
   return (
     <div className="header-container w-3/4 mx-auto flex items-center desktop:justify-between mobile:justify-between">
-      {!isMenuOpen && <div className="header-logo-container">
-        <Link className="site-logo" to="/">
-          <img
-            className="desktop:w-2/12 mobile:w-3/12 rounded-full"
-            src={storeLogo}
-            alt="dark-logo"
-          />
-        </Link>
-      </div>}
+      {!isMenuOpen && (
+        <div className="header-logo-container">
+          <Link className="site-logo" to="/">
+            <img
+              className="desktop:w-2/12 mobile:w-3/12 rounded-full"
+              src={storeLogo}
+              alt="dark-logo"
+            />
+          </Link>
+        </div>
+      )}
 
       {/* Hamburger Menu Icon */}
       <div className="desktop:hidden">
@@ -55,7 +58,7 @@ export default function NavBar() {
       {/* Navigation Links */}
       <nav
         className={`${
-          isMenuOpen ? "block" : "hidden"
+          isMenuOpen ? "block" : "mobile:hidden"
         } flex navigation-link-container desktop:gap-4 items-center mobile:gap-6`}
       >
         <NavLink
@@ -67,25 +70,25 @@ export default function NavBar() {
         <NavLink
           to="/services/manicure"
           style={({ isActive }) => (isActive ? activeStyles : null)}
-          
         >
           SERVICES
         </NavLink>
         <NavLink
           to="/gallery"
           style={({ isActive }) => (isActive ? activeStyles : null)}
-          
         >
-          GALLERY 
+          GALLERY
         </NavLink>
-       { !isMenuOpen && <div className="social-icon-container flex gap-2 items-center">
-          <a href="https://www.facebook.com/profile.php?id=61553458505834&mibextid=LQQJ4d">
-            <img className="w-6" src={facebookIcon} alt="facebook-icon" />
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61553458505834&mibextid=LQQJ4d">
-            <img className="w-10" src={instagramIcon} alt="instagram-icon" />
-          </a>
-        </div>}
+        {!isMenuOpen && (
+          <div className="social-icon-container flex gap-2 items-center">
+            <a href="https://www.facebook.com/profile.php?id=61553458505834&mibextid=LQQJ4d">
+              <img className="w-6" src={facebookIcon} alt="facebook-icon" />
+            </a>
+            <a href="https://www.instagram.com/ptnailsbarmiiton?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr">
+              <img className="w-10" src={instagramIcon} alt="instagram-icon" />
+            </a>
+          </div>
+        )}
       </nav>
     </div>
   );

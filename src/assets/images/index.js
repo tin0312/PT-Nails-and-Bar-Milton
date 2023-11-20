@@ -25,4 +25,9 @@ export { default as pic24 } from "./pic-24.jpg";
 export { default as pic25 } from "./pic-25.jpg";
 export { default as pic26} from "./pic-26.jpg";
 export { default as pic27} from "./pic-27.jpg";
+export { default as productOne } from "./product-1.webp";
+export { default as productTwo } from "./product-2.webp";
+export { default as productThree } from "./product-3.webp";
+export { default as productFour} from "./product-4.webp";
+export { default as productFive} from "./product-5.jpg";
 
