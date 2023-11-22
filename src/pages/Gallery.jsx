@@ -1,19 +1,20 @@
 import React from "react";
-import { Button } from "flowbite-react"
-import * as Images from "../assets/images/index"
+import { Button } from "flowbite-react";
+import * as Images from "../assets/images/index";
+import SocialIcon from "../components/SocialIcon";
 
 export default function Gallery() {
-  const initialVisibleImages = 9
+  const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] =
-    React.useState(initialVisibleImages)
-  const [isSpinning, setIsSpinning] = React.useState(false)
+    React.useState(initialVisibleImages);
+  const [isSpinning, setIsSpinning] = React.useState(false);
 
   const loadMoreImages = () => {
-    setIsSpinning(true)
+    setIsSpinning(true);
     setTimeout(() => {
-      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9)
-      setIsSpinning(false)
-    }, 1000)
+      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9);
+      setIsSpinning(false);
+    }, 1000);
   };
 
   const images = [
@@ -22,7 +23,6 @@ export default function Gallery() {
     Images.pic3,
     Images.pic4,
     Images.pic5,
-    Images.pic6,
     Images.pic7,
     Images.pic8,
     Images.pic9,
@@ -43,16 +43,16 @@ export default function Gallery() {
     Images.pic24,
     Images.pic25,
     Images.pic26,
-    Images.pic27
-  ]
+    Images.pic27,
+  ];
 
   return (
-    <div className="gallery-container mx-auto mb-20 pb-12 mobile:w-screen">
+    <div className="gallery-container mx-auto mb-20 mobile:w-screen">
       <div className="gallery-header-container text-center">
         <h1 className="pb-10 pt-4 font-semibold text-4xl">Gallery</h1>
       </div>
 
-      <div className="collection-container mx-auto grid desktop:grid-cols-2 mobile:grid-cols-1 gap-4">
+      <div className="collection-container mx-auto grid desktop:grid-cols-3 mobile:grid-cols-1 gap-4">
         {images.slice(0, visibleImages).map((image, index) => (
           <div key={index}>
             <img
@@ -74,6 +74,12 @@ export default function Gallery() {
             </Button>
           </div>
         )}
+      </div>
+      <div className="flex flex-col gallery-icon-container p-10 items-center">
+        <h2 className="text-3xl">Follow us on</h2>
+        <div>
+          <SocialIcon />
+        </div>
       </div>
     </div>
   );

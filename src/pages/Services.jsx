@@ -33,7 +33,6 @@ export default function Services() {
           >
             Packages
           </NavLink>
-
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
             to="/services/artificial-nails"

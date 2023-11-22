@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import storeLogo from "../assets/images/store-logo.jpg";
-import instagramIcon from "../assets/images/instagram-icon.svg";
-import facebookIcon from "../assets/images/facebook-icon.svg";
+import SocialIcon from "./SocialIcon";
 
 export default function NavBar() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-    console.log(isMenuOpen)
-  }
-
   const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
     color: "#161616",
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      const logo = document.querySelector(".site-logo img");
+      if (logo) {
+        logo.classList.add("flip-animation");
+        setTimeout(() => {
+          logo.classList.remove("spin-animation");
+        }, 3000); // 2000 milliseconds (2 seconds) for the rotation animation
+      }
+    }, 3000); // 3000 milliseconds (3 seconds) interval for rotation
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <div className="header-container w-3/4 mx-auto flex items-center desktop:justify-between mobile:justify-between">
@@ -79,16 +91,9 @@ export default function NavBar() {
         >
           GALLERY
         </NavLink>
-        {!isMenuOpen && (
-          <div className="social-icon-container flex gap-2 items-center">
-            <a href="https://www.facebook.com/profile.php?id=61553458505834&mibextid=LQQJ4d">
-              <img className="w-6" src={facebookIcon} alt="facebook-icon" />
-            </a>
-            <a href="https://www.instagram.com/ptnailsbarmiiton?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr">
-              <img className="w-10" src={instagramIcon} alt="instagram-icon" />
-            </a>
-          </div>
-        )}
+        <div className="mobile:hidden">
+          <SocialIcon />
+        </div>
       </nav>
     </div>
   );

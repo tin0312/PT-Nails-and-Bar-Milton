@@ -30,4 +30,7 @@ export { default as productTwo } from "./product-2.webp";
 export { default as productThree } from "./product-3.webp";
 export { default as productFour} from "./product-4.webp";
 export { default as productFive} from "./product-5.jpg";
+export { default as facebookIcon} from "./facebook-icon.svg";
+export { default as instagramIcon} from "./instagram-icon.svg";
+
 
