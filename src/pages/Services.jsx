@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet, Route } from "react-router-dom";
+import { NavLink, Outlet} from "react-router-dom";
 
 export default function Services() {
   const activeStyles = {

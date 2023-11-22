@@ -35,13 +35,13 @@ export default function Footer() {
           <div className="contact-container flex flex-col gap-4 pb-10">
             <h4 className="text-lg font-bold uppercase">Contact</h4>
             <p className="w-2/3">
-              phone: <a href="tel:+16479270500">+1 647 927 0500</a>
+              phone: <a href="tel:+16479270500">+1 905 864 9495</a>
             </p>
             <p className="w-auto">
               email:
-              <a href="mailto:ptnailsandbarmilton@gmail.com">
+              <a href="mailto:ptnailsandbar2023@gmail.com">
                 {" "}
-                ptnailsandbarmilton@gmail.com
+                ptnailsandbar2023@gmail.com
               </a>
             </p>
           </div>

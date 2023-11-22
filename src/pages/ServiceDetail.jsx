@@ -1,5 +1,3 @@
-// ServiceDetail.js
-
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -25,10 +23,10 @@ const serviceDetails = {
   ],
   packages: [
     { name: "Regular Manicure and Pedicure", price: "$50" },
-    { name: "Package Regular pedicure and shellac manicure", price: "$65" },
-    { name: "Package shellac pedicure and regular manicure", price: "$65" },
-    { name: "Package shellac pedicure and shellac manicure", price: "$75" },
-    { name: "Any combo Artificial Nails and pedicure", price: "-$5" },
+    { name: "Regular pedicure and shellac manicure", price: "$65" },
+    { name: "Shellac pedicure and regular manicure", price: "$65" },
+    { name: "Shellac pedicure and shellac manicure", price: "$75" },
+    { name: "Artificial Nails and pedicure", price: "-$5" },
     { name: " Bath Bomb Pedicure", price: "+$15" },
     { name: "Collagen Pedicure", price: "+$20" },
     { name: "Deluxe Seasonal Pedicure", price: "+$25" },
@@ -82,7 +80,7 @@ const serviceDetails = {
     { name: "Pedicure and Manicure", price: "$40" },
     { name: "Full Pedicure and Hands Color", price: "$35" },
     { name: "Add-on: Shellac Color", price: "+$10" },
-    { name: "Services include free designs", price: "♥" },
+    { name: "Services include free designs", price: "❤️" },
   ],
   "eyeslash-extension": [
     { name: "Fullset", price: "$120" },
@@ -94,9 +92,9 @@ const serviceDetails = {
   "extra-services": [
     { name: "Nails Trim - Hand", price: "$7" },
     { name: "Nails Trim - Toes", price: "$12" },
-    { name: "Nail Repair", price: "$5+" },
+    { name: "Nail Repair", price: "+$5" },
     { name: "Nail Removal", price: "$15" },
-    { name: "Nail Design", price: "$5+" },
+    { name: "Nail Design", price: "+$5" },
     { name: "Shellac Removal: Hand", price: "$8" },
     { name: "Shellac Removal: Toes", price: "$10" },
     { name: "Dipping Removal", price: "$12" },
@@ -125,8 +123,8 @@ export default function ServiceDetail() {
       <h3 className="text-center text-2xl pb-4">Services and Price</h3>
       <div className="w-full container flex justify-center mx-auto p-6">
         <p className="w-3/4 text-sm italic text-center">
-          *Explore a world of endless possibilities with our nail services!
-          Our store proudly offers an extensive palette of colors, boasting a
+          *Explore a world of endless possibilities with our nail services! Our
+          store proudly offers an extensive palette of colors, boasting a
           remarkable collection of 700 shades
         </p>
       </div>

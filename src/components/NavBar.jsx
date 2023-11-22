@@ -23,9 +23,9 @@ export default function NavBar() {
         logo.classList.add("flip-animation");
         setTimeout(() => {
           logo.classList.remove("spin-animation");
-        }, 3000); // 2000 milliseconds (2 seconds) for the rotation animation
+        }, 3000); // 3000 milliseconds (3 seconds) for the rotation animation
       }
-    }, 3000); // 3000 milliseconds (3 seconds) interval for rotation
+    }, 1000); // 1000 milliseconds (1 second) interval for rotation
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);

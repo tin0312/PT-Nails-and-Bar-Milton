@@ -4,18 +4,6 @@ import * as Images from "../assets/images/index";
 import SocialIcon from "../components/SocialIcon";
 
 export default function Gallery() {
-  const initialVisibleImages = 9;
-  const [visibleImages, setVisibleImages] =
-    React.useState(initialVisibleImages);
-  const [isSpinning, setIsSpinning] = React.useState(false);
-
-  const loadMoreImages = () => {
-    setIsSpinning(true);
-    setTimeout(() => {
-      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9);
-      setIsSpinning(false);
-    }, 1000);
-  };
 
   const images = [
     Images.pic1,
@@ -45,6 +33,18 @@ export default function Gallery() {
     Images.pic26,
     Images.pic27,
   ];
+  
+  const initialVisibleImages = 9;
+  const [visibleImages, setVisibleImages] =React.useState(initialVisibleImages);
+  const [isSpinning, setIsSpinning] = React.useState(false);
+
+  const loadMoreImages = () => {
+    setIsSpinning(true);
+    setTimeout(() => {
+      setVisibleImages((prevVisibleImages) => prevVisibleImages + 9);
+      setIsSpinning(false);
+    }, 1000);
+  };
 
   return (
     <div className="gallery-container mx-auto mb-20 mobile:w-screen">

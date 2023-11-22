@@ -7,8 +7,10 @@ import { Carousel } from "flowbite-react";
 import { Button } from "flowbite-react";
 import * as Images from "../assets/images/index"
 
-const productImages = [Images.productOne, Images.productTwo, Images.productThree, Images.productFour, Images.productFive];
+
 export default function Home() {
+
+  const productImages = [Images.productOne, Images.productTwo, Images.productThree, Images.productFour, Images.productFive,Images.productSix, Images.productSeven,Images.productEight, Images.productNine,Images.productTen, Images.productEleven,Images.productTwelve];
 
   const scrollToBooking = () => {
     scroller.scrollTo('booking', {
