@@ -20,6 +20,11 @@ const serviceDetails = {
     { name: "Shellac Toes Polish Change", price: "$27" },
     { name: "Paraffin wax for feet", price: "$15" },
     { name: "Deluxe Seasonal Pedicure", price: "$57" },
+    { name: "Basic Pedicure | with Gel", price: "$50" },
+    { name: "Deluxe Spa Pedicure | with Gel", price: "$60" },
+    { name: "Volcano Spa Pedicure | with Gel", price: "$65" },
+    { name: "Special Spa Pedicure ", price: "$60 " },
+    { name: "Special Spa Pedicure | with Gel", price: "$75" },
   ],
   packages: [
     { name: "Regular Manicure and Pedicure", price: "$50" },

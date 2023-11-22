@@ -33,7 +33,7 @@ export default function Gallery() {
     Images.pic26,
     Images.pic27,
   ];
-  
+
   const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] =React.useState(initialVisibleImages);
   const [isSpinning, setIsSpinning] = React.useState(false);
@@ -56,7 +56,7 @@ export default function Gallery() {
         {images.slice(0, visibleImages).map((image, index) => (
           <div key={index}>
             <img
-              className="gallery-image h-auto max-w-full rounded-lg"
+              className="gallery-image max-w-full desktop:h-full mobile:w-full rounded-lg"
               src={image}
               alt="gallery-image"
             />
