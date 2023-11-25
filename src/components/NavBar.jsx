@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import storeLogo from "../assets/images/store-logo.jpg";
-import SocialIcon from "./SocialIcon";
+import { Button } from "flowbite-react";
 
 export default function NavBar() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeStyles = {
     fontWeight: "bold",
@@ -31,7 +30,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="header-container w-3/4 mx-auto flex items-center desktop:justify-between mobile:justify-between">
+    <div className="header-container w-3/4 mx-auto flex items-center justify-between mobile:justify-center">
       {!isMenuOpen && (
         <div className="header-logo-container">
           <Link className="site-logo" to="/">
@@ -45,7 +44,7 @@ export default function NavBar() {
       )}
 
       {/* Hamburger Menu Icon */}
-      <div className="desktop:hidden">
+      <div className="desktop:hidden mobile:pr-5">
         <button
           className="text-gray-600 focus:outline-none"
           onClick={toggleMenu}
@@ -91,9 +90,14 @@ export default function NavBar() {
         >
           GALLERY
         </NavLink>
-        <div className="mobile:hidden">
-          <SocialIcon />
-        </div>
+        <a
+          href="https://booksalon.ca/pt-nail-bar/booking"
+          className="focus:outline-none"
+        >
+          <Button color="dark" className="uppercase mobile:p-0.1">
+            Book now!
+          </Button>
+        </a>
       </nav>
     </div>
   );

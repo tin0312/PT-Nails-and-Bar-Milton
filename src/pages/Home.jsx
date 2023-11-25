@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import { scroller } from "react-scroll";
 import { Carousel, Button } from "flowbite-react";
 import * as Images from "../assets/images/index";
-import nailCta from "../assets/images/nail-cta-bg.avif";
-import quotationIcon from "../assets/images/quotation-icon.png";
-import storyImage from "../assets/images/story-image.webp";
 
 export default function Home() {
+  const heroBanners = [
+    Images.heroBanner,
+    Images.heroBanner1,
+    Images.heroBanner2,
+    Images.heroBanner3,
+  ];
   const productImages = [
     Images.productOne,
     Images.productTwo,
@@ -24,14 +26,6 @@ export default function Home() {
     Images.productTwelve,
   ];
 
-  const scrollToBooking = () => {
-    scroller.scrollTo("booking", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
-
   const scrollToTopOnClick = () => {
     scroll.scrollToTop({
       duration: 800,
@@ -43,41 +37,12 @@ export default function Home() {
   return (
     <>
       <div className="home-container w-screen mb-20">
-        <div className="cta-image-container relative">
-          <img src={nailCta} alt="nail-cta-image" />
-        </div>
-        <div className="overlay-container desktop:w-1/3 mobile:w-5/6 mobile:h-3/6 absolute mobile:mx-auto flex flex-col desktop:gap-10 font-bold p-5 justify-center items-center ">
-          <div className="w-full cta-header-container desktop:pb-20 mobile:pb-2 flex justify-start pl-0 text-3xl">
-            <h2>Time for a glam-up!</h2>
-          </div>
-
-          <div className="message-container flex-col gap-10 desktop:items-start mobile:items-start">
-            <div className="desktop:flex mobile:flex-col icon-container">
-              <div className="mobile:w-full flex justify-center pb-10">
-                <img
-                  className="h-8 w-8 desktop:pr-2"
-                  src={quotationIcon}
-                  alt="quotation-icon"
-                />
-              </div>
-              <p className="desktop:w-4/5 tracking-wider text-lg">
-                Fabulous nails aren't a stroke of luck; they're perfected
-                through appointments
-              </p>
-            </div>
-
-            <div className="w-full flex justify-start desktop:pt-12 mobile:pt-4 ">
-              <Button
-                as={Link}
-                to="/#booking"
-                color="dark"
-                className="uppercase"
-                onClick={scrollToBooking}
-              >
-                Book appointment
-              </Button>
-            </div>
-          </div>
+        <div className="cta-image-container">
+          <Carousel slideInterval={3000}>
+            {heroBanners.map((image, index) => (
+              <img key={index} src={image} alt={`hero-banner-${index}`} loading="lazy" />
+            ))}
+          </Carousel>
         </div>
         <div className="story-container w-3/4 mx-auto py-20 desktop:flex mobile:flex-col">
           <div className="story-message-container desktop:w-3/5 mobile:w-full flex flex-col gap-10">
@@ -94,8 +59,8 @@ export default function Home() {
               top-notch nail care!
             </p>
           </div>
-          <div className="story-image-container desktop:w-2/5 mobile:h-2/3 mobile:w-full">
-            <img className="w-full h-full" src={storyImage} alt="story-image" />
+          <div className="story-image-container desktop:w-3/5 mobile:h-2/3 mobile:w-full">
+            <img className="w-full h-full" src={Images.bannerStory} alt="story-banner" />
           </div>
         </div>
         <div className="service-introduction-container desktop:flex mobile:flex-col w-3/4 mx-auto py-20">
@@ -139,7 +104,7 @@ export default function Home() {
             <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 w-full">
               <Carousel slideInterval={3000}>
                 {productImages.map((image, index) => (
-                  <img key={index} src={image} alt={`product-slide-${index}`} />
+                  <img key={index} src={image} alt={`product-slide-${index}`} loading="lazy" />
                 ))}
               </Carousel>
             </div>
