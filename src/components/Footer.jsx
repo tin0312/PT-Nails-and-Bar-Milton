@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="text-center pt-20 opacity-40 text-sm">
         {" "}
         <p>
-          &copy; 2023 PT Nails Bar Milton. All rights reserved. | Made with ❤️{" "}
+          &copy; 2023 PT Nails Bar Milton. All rights reserved. | Made by Truong Nhat Hoang with ❤️
         </p>
       </div>
     </footer>

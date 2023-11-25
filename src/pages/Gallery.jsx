@@ -52,6 +52,7 @@ export default function Gallery() {
         <img
           src={Images.bannerGallery}
           alt="gallery-banner"
+          loading="lazy"
         />
       </div>
       <div className="gallery-container pt-20 mx-auto mb-36 mobile:w-screen">
@@ -59,9 +60,10 @@ export default function Gallery() {
           {images.slice(0, visibleImages).map((image, index) => (
             <div key={index}>
               <img
-                className="gallery-image max-w-full desktop:h-full mobile:w-full rounded-lg"
+                className="gallery-image max-w-full desktop:h-auto mobile:h-full mobile:w-full rounded-lg"
                 src={image}
                 alt="gallery-image"
+                loading="lazy"
               />
             </div>
           ))}

@@ -30,7 +30,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="header-container w-3/4 mx-auto flex items-center justify-between mobile:justify-center">
+    <div className="header-container w-3/4 mobile:w-11/12  mx-auto flex items-center justify-between mobile:justify-center">
       {!isMenuOpen && (
         <div className="header-logo-container">
           <Link className="site-logo" to="/">

@@ -3,6 +3,7 @@ export { default as heroBanner} from "./heroBanner.png";
 export { default as heroBanner1} from "./heroBanner1.png";
 export { default as heroBanner2} from "./heroBanner2.png";
 export { default as heroBanner3} from "./heroBanner3.png";
+export { default as heroBanner4} from "./heroBanner4.png";
 export { default as bannerStory} from "./bannerStory.png";
 export { default as bannerService} from "./bannerService.png";
 export { default as bannerGallery} from "./bannerGallery.png";

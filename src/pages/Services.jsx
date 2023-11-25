@@ -15,6 +15,7 @@ export default function Services() {
         <img
           src={Images.bannerService}
           alt="gallery-banner"
+          loading="lazy"
         />
       </div>
       <div className="service-link-container">

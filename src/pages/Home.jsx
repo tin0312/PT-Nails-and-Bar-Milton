@@ -10,6 +10,7 @@ export default function Home() {
     Images.heroBanner1,
     Images.heroBanner2,
     Images.heroBanner3,
+    Images.heroBanner4,
   ];
   const productImages = [
     Images.productOne,
@@ -40,7 +41,12 @@ export default function Home() {
         <div className="cta-image-container">
           <Carousel slideInterval={3000}>
             {heroBanners.map((image, index) => (
-              <img key={index} src={image} alt={`hero-banner-${index}`} loading="lazy" />
+              <img
+                key={index}
+                src={image}
+                alt={`hero-banner-${index}`}
+                loading="lazy"
+              />
             ))}
           </Carousel>
         </div>
@@ -60,7 +66,12 @@ export default function Home() {
             </p>
           </div>
           <div className="story-image-container desktop:w-3/5 mobile:h-2/3 mobile:w-full">
-            <img className="w-full h-full" src={Images.bannerStory} alt="story-banner" />
+            <img
+              className="w-full h-full"
+              src={Images.bannerStory}
+              alt="story-banner"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className="service-introduction-container desktop:flex mobile:flex-col w-3/4 mx-auto py-20">
@@ -104,7 +115,12 @@ export default function Home() {
             <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 w-full">
               <Carousel slideInterval={3000}>
                 {productImages.map((image, index) => (
-                  <img key={index} src={image} alt={`product-slide-${index}`} loading="lazy" />
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`product-slide-${index}`}
+                    loading="lazy"
+                  />
                 ))}
               </Carousel>
             </div>
