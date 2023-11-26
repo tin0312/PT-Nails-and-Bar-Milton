@@ -8,8 +8,8 @@ import times from "lodash.times";
 export default function Layout() {
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
   const messages = [
-    "20% off of all services from Nov 22 to Dec 22, 2023",
-    "Free one drink with service!",
+    "30% off of all services from Nov 22 to Dec 22, 2023",
+    "Free one drink with services!",
     "10% off of all services with a Google review :)",
   ];
 
