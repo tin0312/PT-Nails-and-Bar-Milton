@@ -4,8 +4,31 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Marquee, { Motion } from "react-marquee-slider";
 import times from "lodash.times";
+import * as Images from "../assets/images/index";
 
 export default function Layout() {
+
+  const backToTop = document.querySelector(".back-to-top");
+  const [isBackToTop, setIsBackToTop] = React.useState(false);
+
+  // Conditionally render the button
+  function renderToTopButton(isBackToTop) {
+    if (backToTop) {
+      backToTop.style.visibility = isBackToTop ? "visible" : "hidden";
+      backToTop.style.opacity = isBackToTop ? "0.2" : "0";
+      backToTop.style.transform = isBackToTop ? "scale(1)" : "scale(0)";
+    }
+  }
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      setIsBackToTop(true);
+      renderToTopButton(isBackToTop);
+    } else {
+      setIsBackToTop(false);
+      renderToTopButton(isBackToTop);
+    }
+  })
+
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
   const messages = [
     "30% off of all services from Nov 22 to Dec 22, 2023",
@@ -52,6 +75,13 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <a href="#top" className="back-to-top" title="Back to Top">
+        <img
+          src={Images.arrowUp}
+          alt="Back to Top"
+          className="back-to-top__image"
+        />
+      </a>
     </div>
-  )
+  );
 }

@@ -1,14 +1,14 @@
 //Banners
-export { default as heroBanner} from "./heroBanner.png";
-export { default as heroBanner1} from "./heroBanner1.png";
-export { default as heroBanner2} from "./heroBanner2.png";
-export { default as heroBanner3} from "./heroBanner3.png";
-export { default as heroBanner4} from "./heroBanner4.png";
-export { default as bannerStory} from "./bannerStory.png";
-export { default as bannerService} from "./bannerService.png";
-export { default as bannerGallery} from "./bannerGallery.png";
+export { default as heroBanner } from "./heroBanner.png";
+export { default as heroBanner1 } from "./heroBanner1.png";
+export { default as heroBanner2 } from "./heroBanner2.png";
+export { default as heroBanner3 } from "./heroBanner3.png";
+export { default as heroBanner4 } from "./heroBanner4.png";
+export { default as bannerStory } from "./bannerStory.png";
+export { default as bannerService } from "./bannerService.png";
+export { default as bannerGallery } from "./bannerGallery.png";
 
-// Gallery 
+// Gallery
 export { default as pic1 } from "./pic-1.jpg";
 export { default as pic2 } from "./pic-2.jpg";
 export { default as pic3 } from "./pic-3.jpg";
@@ -34,29 +34,31 @@ export { default as pic22 } from "./pic-22.jpg";
 export { default as pic23 } from "./pic-23.jpg";
 export { default as pic24 } from "./pic-24.jpg";
 export { default as pic25 } from "./pic-25.jpg";
-export { default as pic26} from "./pic-26.jpg";
-export { default as pic27} from "./pic-27.jpg";
-export { default as pic28} from "./pic-28.jpg";
-export { default as pic29} from "./pic-29.jpg";
-export { default as pic30} from "./pic-30.jpg";
-export { default as pic31} from "./pic-31.jpg";
+export { default as pic26 } from "./pic-26.jpg";
+export { default as pic27 } from "./pic-27.jpg";
+export { default as pic28 } from "./pic-28.jpg";
+export { default as pic29 } from "./pic-29.jpg";
+export { default as pic30 } from "./pic-30.jpg";
+export { default as pic31 } from "./pic-31.jpg";
 
 // Products slideshow in Home Page
 export { default as productOne } from "./product-1.webp";
 export { default as productTwo } from "./product-2.webp";
 export { default as productThree } from "./product-3.webp";
-export { default as productFour} from "./product-4.webp";
-export { default as productFive} from "./product-5.jpg";
+export { default as productFour } from "./product-4.webp";
+export { default as productFive } from "./product-5.jpg";
 export { default as productSix } from "./product-6.jpg";
 export { default as productSeven } from "./product-7.png";
 export { default as productEight } from "./product-8.jpg";
-export { default as productNine} from "./product-9.jpg";
-export { default as productTen} from "./product-10.jpg";
-export { default as productEleven} from "./product-11.jpg";
-export { default as productTwelve} from "./product-12.jpg";
+export { default as productNine } from "./product-9.jpg";
+export { default as productTen } from "./product-10.jpg";
+export { default as productEleven } from "./product-11.jpg";
+export { default as productTwelve } from "./product-12.jpg";
 
 // Social Media Icons
-export { default as facebookIcon} from "./facebook-icon.svg";
-export { default as instagramIcon} from "./instagram-icon.svg";
+export { default as facebookIcon } from "./facebook-icon.svg";
+export { default as instagramIcon } from "./instagram-icon.svg";
 
+//back-to-top button
 
+export { default as arrowUp } from "./arrow-up.svg";
