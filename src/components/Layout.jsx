@@ -5,9 +5,9 @@ import Footer from "./Footer";
 import Marquee, { Motion } from "react-marquee-slider";
 import times from "lodash.times";
 import * as Images from "../assets/images/index";
+import { Link } from "react-scroll";
 
 export default function Layout() {
-
   const backToTop = document.querySelector(".back-to-top");
   const [isBackToTop, setIsBackToTop] = React.useState(false);
 
@@ -27,7 +27,7 @@ export default function Layout() {
       setIsBackToTop(false);
       renderToTopButton(isBackToTop);
     }
-  })
+  });
 
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
   const messages = [
@@ -75,13 +75,20 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <a href="#top" className="back-to-top" title="Back to Top">
+      <Link
+        to="top"
+        smooth={true}
+        duration={500}
+        className={`back-to-top ${isBackToTop ? "visible" : ""}`}
+        offset={-70}
+        title="Back-to-Top"
+      >
         <img
           src={Images.arrowUp}
-          alt="Back to Top"
+          alt="Back-to-Top"
           className="back-to-top__image"
         />
-      </a>
+      </Link>
     </div>
   );
 }
