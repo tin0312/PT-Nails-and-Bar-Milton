@@ -30,11 +30,13 @@ export default function Layout() {
   });
 
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
+
   const messages = [
-    "30% off of all services from Nov 22 to Dec 22, 2023",
-    "Free one drink with services!",
-    "10% off of all services with a Google review :)",
+    "30% off all services Nov 22 - Dec 9, 2023, and 15% off until Dec 22, 2023.",
+    "Free drink with services!",
+    "Get 10% off all services with a Google review :)",
   ];
+  
 
   React.useEffect(() => {
     const interval = setInterval(() => {
