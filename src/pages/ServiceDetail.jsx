@@ -12,7 +12,6 @@ const serviceDetails = {
     { name: "Paraffin wax for hands", price: "$12" },
   ],
   pedicure: [
-    { name: "Regular Pedicure", price: "$35" },
     { name: "Bath Bomb Pedicure", price: "$48" },
     { name: "Shellac Pedicure", price: "$50" },
     { name: "Collagen Deluxe Pedicure", price: "$55" },
@@ -27,7 +26,7 @@ const serviceDetails = {
     { name: "Special Spa Pedicure | with Gel", price: "$75" },
   ],
   packages: [
-    { name: "Regular Manicure and Pedicure", price: "$50" },
+    { name: "Regular Manicure and Pedicure", price: "$55" },
     { name: "Regular pedicure and shellac manicure", price: "$65" },
     { name: "Shellac pedicure and regular manicure", price: "$65" },
     { name: "Shellac pedicure and shellac manicure", price: "$75" },
