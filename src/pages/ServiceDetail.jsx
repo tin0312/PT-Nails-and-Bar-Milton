@@ -81,7 +81,7 @@ const serviceDetails = {
     { name: "Hands and Toes Color", price: "$16" },
     { name: "Kid Pedicure", price: "$30" },
     { name: "Kid Deluxe Pedicure", price: "$40" },
-    { name: "Pedicure and Manicure", price: "$40" },
+    { name: "Pedicure and Manicure", price: "$45" },
     { name: "Full Pedicure and Hands Color", price: "$35" },
     { name: "Add-on: Shellac Color", price: "+$10" },
     { name: "Services include free designs", price: "❤️" },
