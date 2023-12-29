@@ -31,6 +31,19 @@ export default function Gallery() {
     Images.pic25,
     Images.pic26,
     Images.pic27,
+    Images.pic28,
+    Images.pic29,
+    Images.pic29,
+    Images.pic30,
+    Images.pic31,
+    Images.pic32,
+    Images.pic33,
+    Images.pic34,
+    Images.pic35,
+    Images.pic36,
+    Images.pic37,
+    Images.pic38,
+
   ];
 
   const initialVisibleImages = 9;
