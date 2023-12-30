@@ -6,9 +6,6 @@ import * as Images from "../assets/images/index";
 
 export default function Home() {
   const heroBanners = [
-    Images.heroBanner,
-    Images.heroBanner1,
-    Images.heroBanner2,
     Images.heroBanner3,
     Images.heroBanner4,
   ];
