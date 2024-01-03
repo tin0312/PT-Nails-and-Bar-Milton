@@ -91,7 +91,7 @@ export default function NavBar() {
           GALLERY
         </NavLink>
         <a
-          href="https://booksalon.ca/pt-nail-bar/booking"
+          href="https://nailsolutionplus.firebaseapp.com/?storeKey=-NmmzuEPT8VKQw2mh2r7"
           className="focus:outline-none"
         >
           <Button color="dark" className="uppercase mobile:p-0.1">
