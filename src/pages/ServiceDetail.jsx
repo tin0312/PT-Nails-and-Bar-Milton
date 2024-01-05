@@ -28,9 +28,8 @@ const serviceDetails = {
   packages: [
     { name: "Regular Manicure and Pedicure", price: "$55" },
     { name: "Regular pedicure and shellac manicure", price: "$65" },
-    { name: "Shellac pedicure and regular manicure", price: "$65" },
-    { name: "Shellac pedicure and shellac manicure", price: "$75" },
-    { name: "Artificial Nails and pedicure", price: "-$5" },
+    { name: "Shellac pedicure and regular manicure", price: "$70" },
+    { name: "Shellac pedicure and shellac manicure", price: "$80" },   
     { name: " Bath Bomb Pedicure", price: "+$15" },
     { name: "Collagen Pedicure", price: "+$20" },
     { name: "Deluxe Seasonal Pedicure", price: "+$25" },
